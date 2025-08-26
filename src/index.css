@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+ 
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  .fraunces {
+    font-family: "Fraunces", serif;
+  
+  }
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #5E6D50;  
+  font-weight: bold;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px;  
+}
+
+
+ .custom-pagination .swiper-pagination {
+  position: relative;
+  margin-top: 20px;  
+  text-align: center;
+}
+
+ .custom-pagination .swiper-pagination-bullet {
+  background-color: #d7cbb2;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+ .custom-pagination .swiper-pagination-bullet-active {
+  background-color: #5E6D50;
+  width: 14px;
+  height: 14px;
+}
