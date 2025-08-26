@@ -1,6 +1,8 @@
 import React from 'react'
 import AdsSlider from './AdsSlider'
 import PopCard from './PopCard';
+import { Link } from 'react-router-dom';
+ 
 
 
 
@@ -10,89 +12,92 @@ function Main() {
 
    <AdsSlider/>
 
-        <div className="mt-10 text-center px-4">
+   <div className="relative z-10 mt-60 text-center px-4">
+  <div className="flex justify-center mb-6">
+    <h1 className="bg-[#D7CBB2] px-6 py-2 text-xl md:text-3xl font-light font-mono tracking-widest">
+      Discover Veramar
+    </h1>
+  </div>
 
-        <div className="flex justify-center mb-6">
-          <h1 className="bg-[#D7CBB2] px-6 py-2 text-xl md:text-3xl font-light font-mono tracking-widest">
-            Discover Veramar
-          </h1>
-        </div>
-
-        <div className="flex justify-center">
-          <h3 className="max-w-4xl text-gray-400 text-[15px] font-mono leading-relaxed tracking-wide">
-            We are an eco-friendly brand committed to environmental preservation and
-            social responsibility. Designed by women for women, we celebrate diversity
-            and feminine strength.
-          </h3>
-        </div>
-      </div>
-
-
-          <div>
-                <video width="70%" className='mt-10 mx-auto' controls>
-              <source src="/video/veramarVideo.mp4" type="video/mp4" />
-                </video>
-          </div>
-
-              <div className='mt-10 text-center px-4'>
-              <div className="flex justify-center mb-6">
-              <h1 className="bg-[#D7CBB2] px-6 py-2 text-xl md:text-3xl font-light font-mono tracking-widest">
-              Our Pillars
-              </h1>
-            </div>
-              </div>
+  <div className="flex justify-center">
+    <h3 className="max-w-4xl text-gray-400 text-[15px] font-mono leading-relaxed tracking-wide">
+      We are an eco-friendly brand committed to environmental preservation and
+      social responsibility. Designed by women for women, we celebrate diversity
+      and feminine strength.
+    </h3>
+  </div>
+</div>
 
 
-           
-      <div className='flex gap-4 mx-auto justify-center'>
 
-          <div className="max-w-sm rounded-3xl    ">
-        <a href="#">
-            <img className="rounded-lg" src="/img/bottle.webp" alt="" />
-        </a>
-        <div className="p-5">
-            <a href="#">
-                <h1 className="mb-2 font-serif text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-black">Ecology</h1>
-            </a>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 font-serif">Veramar doesn't just make swimwear, it does so with a deep ecological conscience. Aware of the environmental impact caused by plastic, we decided to turn a problem into a solution.</p>
-        </div>
-          </div>
+     <div className='mt-20'>
+      <video className="w-3/4 mx-auto rounded-lg" controls>
+  <source src="https://veramar.gt/wp-content/uploads/2024/10/Veramar-Institucional-720-Made-with-Clipchamp.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
-          <div className="max-w-sm rounded-3xl    ">
-        <a href="#">
-            <img className="rounded-lg" src="/img/people.webp" alt="" />
-        </a>
-        <div className="p-5">
-            <a href="#">
-                <h1 className="mb-2 font-serif text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-black">Social Responsibility</h1>
-            </a>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Mi eelo is much more than an organization; it's a driving force for social change dedicated to empowering women at risk, providing them not only with decent work but also the opportunity to transform their lives.</p>
-        </div>
-          </div>
-
-          <div className="max-w-sm rounded-3xl    ">
-        <a href="#">
-            <img className="rounded-lg" src="/img/chicks.webp" alt="" />
-        </a>
-        <div className="p-5">
-            <a href="#">
-                <h1 className="mb-2 font-serif text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-black">Ecology</h1>
-            </a>
-            <p className="mb-3 font-serif text-gray-700 dark:text-gray-400">Veramar doesn't just make swimwear, it does so with a deep ecological conscience. Aware of the environmental impact caused by plastic, we decided to turn a problem into a solution.</p>
-        </div>
-          </div>
-        
-
-      </div>
+     </div>
 
 
-      <div className='mt-10 text-center px-4'>
-              <div className="flex justify-center mb-6">
-                  <h1 className="bg-[#D7CBB2] px-6 py-2 text-xl md:text-3xl font-light font-mono tracking-widest">
-                  Seasonal Offers
-                  </h1>
-             </div>
-      </div>
+
+
+          
+
+      <div className="mt-10 px-4 max-w-7xl mx-auto">
+  <div className="flex justify-center mb-6">
+    <h1 className="bg-[#D7CBB2] px-6 py-2 text-2xl md:text-3xl font-light font-mono tracking-widest">
+      Our Pillars
+    </h1>
+  </div>
+
+  <div className="flex flex-col md:flex-row gap-8 md:gap-6 justify-center">
+
+    <div className="flex-1 text-center">
+      <img
+        src="/img/bottle.webp"
+        alt="Ecology"
+        className="mx-auto rounded-lg w-full max-w-sm object-cover"
+      />
+      <h2 className="mt-4 text-xl font-serif text-gray-800">Ecology</h2>
+      <p className="mt-2 text-gray-600 text-sm md:text-base">
+        Veramar doesn't just make swimwear, it does so with a deep ecological
+        conscience. Aware of the environmental impact caused by plastic, we
+        decided to turn a problem into a solution.
+      </p>
+    </div>
+
+
+    <div className="flex-1 text-center">
+      <img
+        src="/img/people.webp"
+        alt="Social Responsibility"
+        className="mx-auto rounded-lg w-full max-w-sm object-cover"
+      />
+      <h2 className="mt-4 text-xl font-serif text-gray-800">Social Responsibility</h2>
+      <p className="mt-2 text-gray-600 text-sm md:text-base">
+        Mi eelo is much more than an organization; it's a driving force for
+        social change dedicated to empowering women at risk, providing them
+        not only with decent work but also the opportunity to transform their
+        lives.
+      </p>
+    </div>
+
+
+    <div className="flex-1 text-center">
+      <img
+        src="/img/chicks.webp"
+        alt="Women for Women"
+        className="mx-auto rounded-lg w-full max-w-sm object-cover"
+      />
+      <h2 className="mt-4 text-xl font-serif text-gray-800">Women for Women</h2>
+      <p className="mt-2 text-gray-600 text-sm md:text-base">
+        Created by talented and passionate women, our products are designed
+        with diversity and inclusion in mind, so every woman feels confident,
+        comfortable, and beautiful in her own skin.
+      </p>
+    </div>
+  </div>
+</div>
 
 
 
@@ -102,11 +107,17 @@ function Main() {
         <div className='flex max-w-6xl mx-auto'>
 
            <PopCard/>
-       
 
-        
-     
+
+
+
+
+
         </div>
+
+          <Link to="/collection">
+        <span className='bg-[#D7CBB2] flex justify-center max-w-[200px] mx-auto mb-10 mt-5 px-4 sm:px-6 py-2 sm:py-2 rounded-md cursor-pointer hover:bg-amber-600 transition-colors text-xs sm:text-sm font-medium'>See Store</span>
+          </Link>
       
 
 
