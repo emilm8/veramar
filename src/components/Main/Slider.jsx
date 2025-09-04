@@ -1,12 +1,10 @@
 import React from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
-// import required modules
+ 
 import { EffectFade, Autoplay } from 'swiper/modules';
 
 import "../../index.css";

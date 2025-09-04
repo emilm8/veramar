@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,10 +26,22 @@ function Footer() {
  
  
         <div className="text-white space-y-2">
-          <p className="font-semibold border-b-[2px] border-[#d9d2bb] inline-block pb-1">Veramar</p>
-          <p className=''>Store</p>
-          <p>Blog</p>
-          <p>Contact</p>
+        <Link to="/main">
+          <p className="font-semibold border-b-[2px] border-[#d9d2bb] inline-block">Veramar</p>
+        
+        </Link>
+          <Link to="/collection">
+            <p className='mt-2'>Store</p>
+          </Link>
+          <Link to="/blog">
+            <p>
+            Blog
+            </p>
+          </Link>
+
+          <Link to="/contact">
+         <p>Contact</p>
+          </Link>
         </div>
       </div>
   

@@ -11,6 +11,7 @@ import Details from './components/Pages/Details'
 import ScrollToTop from './components/ScrollToTop'
 import TableMeasure from './components/Pages/TableMeasure'
 import MyAccount from './components/Pages/MyAccount'
+import ShoppingCart from './components/Pages/ShoppingCart'
 
 function App() {
   return (
@@ -26,9 +27,10 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/Veramar" element={<Main/>} />
         <Route path="/collection" element={<Collection/>} />
-        <Route path="/details/:id" element={<Details />} />
+        <Route path="/details/:category/:id" element={<Details />} />
         <Route path="/measure" element={<TableMeasure />} />
         <Route path="/account" element={<MyAccount />} />
+        <Route path="/cart" element={<ShoppingCart />} />
 
  
       </Routes>

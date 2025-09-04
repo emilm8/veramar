@@ -28,7 +28,7 @@ export default function SliderMeasure() {
         style={{ backgroundImage: "url('/img/slider21.webp')" }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          <h2 className="text-white text-3xl md:text-4xl font-bold font-mono text-center">
+          <h2 className="text-white text-3xl md:text-6xl font-bold font-mono text-center">
           Table of Measurements
           </h2>
         </div>

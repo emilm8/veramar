@@ -64,16 +64,18 @@ function Contact() {
     </div>
 
  
-<div className="w-[1200px] mb-10 mx-auto h-[500px]">
-  <iframe
-    title="location-map"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.725961905108!2d49.85190761559739!3d40.37719497936914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d9c0c1b1d07%3A0x9b5b0b12dfc6fcd0!2sBaku%2C%20Azerbaijan!5e0!3m2!1sen!2s!4v1692345678901!5m2!1sen!2s"
-    className="w-full h-full border-0"
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
+    <div className="w-full max-w-[1200px] mx-auto mb-10">
+  <div className="relative w-full pb-[55%] h-0">
+    <iframe
+      title="location-map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.725961905108!2d49.85190761559739!3d40.37719497936914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d9c0c1b1d07%3A0x9b5b0b12dfc6fcd0!2sBaku%2C%20Azerbaijan!5e0!3m2!1sen!2s!4v1692345678901!5m2!1sen!2s"
+      className="absolute top-0 left-0 w-full h-full border-0"
+      
+      
+    ></iframe>
+  </div>
 </div>
+
 
 
     </>

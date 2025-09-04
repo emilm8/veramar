@@ -4,9 +4,18 @@ const BASE_URL = import.meta.env.VITE_VERAMAR_BACKEND_URL;
 
 export async function getAllCategories() {
   try {
-    console.log("BASE_URL:", BASE_URL);  
     const res = await axios.get(`${BASE_URL}/categories`);
-    console.log("API cavabı:", res.data);
+     return res.data;
+  } catch (err) {
+    console.error("Kategoriya çəkilmədi:", err);
+    return [];
+  }
+}
+
+
+export async function getProductByCategoryId(cat, id) {
+  try {
+    const res = await axios.get(`${BASE_URL}/${cat}/${id}`);
     return res.data;
   } catch (err) {
     console.error("Kategoriya çəkilmədi:", err);
@@ -14,6 +23,15 @@ export async function getAllCategories() {
   }
 }
 
+
+
+
+
+ 
+//https://data-veramar1.vercel.app
+
+
+ 
 export async function getProductById(productId) {
   try {
     const categories = await getAllCategories();
@@ -27,7 +45,7 @@ export async function getProductById(productId) {
     return null;
   }
 }
-
+ 
 
 
 
@@ -37,21 +55,20 @@ export async function getProductById(productId) {
 
 export async function getAllGlasses() {
   try {
-    console.log("BASE_URL:", BASE_URL);  
     const res = await axios.get(`${BASE_URL}/glasses`);
-    console.log("API cavabı:", res.data);
-    return res.data;
+     return res.data;  
   } catch (err) {
     console.error("Kategoriya çəkilmədi:", err);
     return [];
   }
 }
+
+
+
 export async function getAllbathSuit() {
   try {
-    console.log("BASE_URL:", BASE_URL);  
     const res = await axios.get(`${BASE_URL}/bathSuit`);
-    console.log("API cavabı:", res.data);
-    return res.data;
+     return res.data;
   } catch (err) {
     console.error("Kategoriya çəkilmədi:", err);
     return [];
@@ -59,12 +76,14 @@ export async function getAllbathSuit() {
 }
 export async function getAllbags() {
   try {
-    console.log("BASE_URL:", BASE_URL);  
     const res = await axios.get(`${BASE_URL}/bags`);
-    console.log("API cavabı:", res.data);
-    return res.data;
+     return res.data;
   } catch (err) {
     console.error("Kategoriya çəkilmədi:", err);
     return [];
   }
 }
+
+
+
+

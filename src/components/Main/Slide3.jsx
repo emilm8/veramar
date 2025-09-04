@@ -7,9 +7,11 @@ import React, { useRef } from "react";
 import { FaBottleWater } from "react-icons/fa6";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-
-export default function Slide3({ products }) {
+import { useNavigate } from "react-router-dom";
+export default function Slide3({ products,category }) {
   const swiperRef = useRef(null);
+  const navigate = useNavigate()
+
 
   return (
     <div className="relative w-full">
@@ -19,19 +21,19 @@ export default function Slide3({ products }) {
         breakpoints={{
           0: { slidesPerView: 1, spaceBetween: 10 },
           640: { slidesPerView: 2, spaceBetween: 15 },
-          1024: { slidesPerView: 3, spaceBetween: 20 }, // ✅ 3 card
+          1024: { slidesPerView: 3, spaceBetween: 20 },  
         }}
         modules={[Pagination, Navigation]}
         className="mySwiper custom-pagination"
       >
         {products.map((item, index) => (
           <SwiperSlide key={index} className="flex justify-center">
-            <div className="w-full max-w-[300px] bg-[#f7ede0] rounded-lg overflow-hidden shadow">
+            <div className="w-full max-w-[300px] bg-[#f7ede0] rounded-lg overflow-hidden shadow"   onClick={()=>navigate(`/details/${category}/${item.id}`)} >
               <img
                 src={item.img?.[0]?.trim?.() || <AiOutlineLoading3Quarters />
                 }
                 alt={item.name}
-                className="w-full h-[420px] object-cover" // ✅ kiçik şəkil
+                className="w-full h-[420px] object-cover" 
               />
               <div className="p-3">
                 <div className="text-lg font-mono text-[#5E6D50] font-light mb-2">
