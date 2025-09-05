@@ -25,7 +25,7 @@ function PopCard() {
       <div className="max-w-6xl mx-auto p-4 overflow-auto">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 ">
           {products.slice(0, 3).map((item, index) => (
-            <div key={index} className="p-4 rounded cursor-pointer" onClick={() => navigate(`/details/{item.id}`)}>
+            <div key={index} className="p-4 rounded cursor-pointer" onClick={() => navigate(`/details/tienda/${item.id}`)}>
               <div>
                 {item.img && item.img[0] ? (
                   <img src={item.img[0]} alt={item.name} className="w-full object-cover rounded mb-6" />
@@ -36,21 +36,21 @@ function PopCard() {
                 )}
               </div>
 
-              <div className="text-2xl font-mono text-[#5E6D50] font-light mb-2">
+              <div className="text-5xl font-mono text-[#5E6D50] frunchy font-light mb-2">
                 {item.name}
               </div>
 
               <div className="flex items-center gap-2 text-gray-600 mb-4">
-                <div className="text-sm font-medium">Recycle</div>
+                <div className="text-sm font-medium text-[#5E6D50]">Recycle</div>
                 <FaBottleWater />
                 <div className="text-sm font-medium">{item.bottle || 10}</div>
               </div>
 
-              <div className="mb-6 text-lg font-medium">
-                <span className="line-through text-gray-400 mr-2">
+              <div className="mb-6 text-lg font-medium ">
+                <span className="line-through text-gray-400 mr-2 frunchy text-2xl">
                   Q {item.price + 500}
                 </span>
-                <span className="text-[#5E6D50] underline">Q {item.price}</span>
+                <span className="text-[#5E6D50] text-2xl underline frunchy">Q {item.price}</span>
               </div>
 
               <div>

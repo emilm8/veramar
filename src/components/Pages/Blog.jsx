@@ -36,7 +36,7 @@ function Blog() {
           Veramar and 4ocean
         </p>
 
-        <p className="text-gray-400 tracking-wide text-sm sm:text-base mt-4">
+        <p  className="text-gray-400 frunchy tracking-wide text-sm sm:text-base mt-4">
           Joining forces for cleaner seas: Veramar and 4ocean.  
           At Veramar, we believe that fashion can be a force for good.
         </p>

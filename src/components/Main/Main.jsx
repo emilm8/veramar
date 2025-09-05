@@ -2,8 +2,6 @@ import React from 'react'
 import AdsSlider from './AdsSlider'
 import PopCard from './PopCard';
 import { Link } from 'react-router-dom';
- 
-
 
 
 function Main() {
@@ -14,7 +12,7 @@ function Main() {
 
    <div className="relative z-10 mt-60 text-center px-4">
   <div className="flex justify-center mb-6">
-    <h1 className="bg-[#D7CBB2] px-6 py-2 text-xl md:text-3xl font-light font-mono tracking-widest">
+    <h1 className="bg-[#D7CBB2] px-6 py-2 text-2xl md:text-5xl font-light font-mono tracking-widest frunchy ">
       Discover Veramar
     </h1>
   </div>
@@ -41,11 +39,9 @@ function Main() {
 
 
 
-          
-
       <div className="mt-10 px-4 max-w-7xl mx-auto">
   <div className="flex justify-center mb-6">
-    <h1 className="bg-[#D7CBB2] px-6 py-2 text-2xl md:text-3xl font-light font-mono tracking-widest">
+    <h1 className="bg-[#D7CBB2] px-6 py-2 text-2xl md:text-5xl font-light font-mono tracking-widest frunchy">
       Our Pillars
     </h1>
   </div>
@@ -58,7 +54,7 @@ function Main() {
         alt="Ecology"
         className="mx-auto rounded-lg w-full max-w-sm object-cover"
       />
-      <h2 className="mt-4 text-xl font-serif text-gray-800">Ecology</h2>
+      <h2 className="mt-4 text-5xl font-serif text-[#748371] frunchy">Ecology</h2>
       <p className="mt-2 text-gray-600 text-sm md:text-base">
         Veramar doesn't just make swimwear, it does so with a deep ecological
         conscience. Aware of the environmental impact caused by plastic, we
@@ -73,7 +69,7 @@ function Main() {
         alt="Social Responsibility"
         className="mx-auto rounded-lg w-full max-w-sm object-cover"
       />
-      <h2 className="mt-4 text-xl font-serif text-gray-800">Social Responsibility</h2>
+      <h2 className="mt-4 text-5xl  font-sans text-[#748371] frunchy ">Social Responsibility</h2>
       <p className="mt-2 text-gray-600 text-sm md:text-base">
         Mi eelo is much more than an organization; it's a driving force for
         social change dedicated to empowering women at risk, providing them
@@ -89,7 +85,7 @@ function Main() {
         alt="Women for Women"
         className="mx-auto rounded-lg w-full max-w-sm object-cover"
       />
-      <h2 className="mt-4 text-xl font-serif text-gray-800">Women for Women</h2>
+      <h2 className="mt-4 text-5xl font-serif text-[#748371] frunchy">Women for Women</h2>
       <p className="mt-2 text-gray-600 text-sm md:text-base">
         Created by talented and passionate women, our products are designed
         with diversity and inclusion in mind, so every woman feels confident,
@@ -105,17 +101,12 @@ function Main() {
     
 
         <div className='flex max-w-6xl mx-auto'>
-
+          
            <PopCard/>
-
-
-
-
-
-
         </div>
 
           <Link to="/collection">
+          
         <span className='bg-[#D7CBB2] flex justify-center max-w-[200px] mx-auto mb-10 mt-5 px-4 sm:px-6 py-2 sm:py-2 rounded-md cursor-pointer hover:bg-amber-600 transition-colors text-xs sm:text-sm font-medium'>See Store</span>
           </Link>
       

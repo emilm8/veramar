@@ -23,14 +23,6 @@ export async function getProductByCategoryId(cat, id) {
   }
 }
 
-
-
-
-
- 
-//https://data-veramar1.vercel.app
-
-
  
 export async function getProductById(productId) {
   try {
@@ -47,12 +39,6 @@ export async function getProductById(productId) {
 }
  
 
-
-
-
-
-
-
 export async function getAllGlasses() {
   try {
     const res = await axios.get(`${BASE_URL}/glasses`);
@@ -64,7 +50,6 @@ export async function getAllGlasses() {
 }
 
 
-
 export async function getAllbathSuit() {
   try {
     const res = await axios.get(`${BASE_URL}/bathSuit`);
@@ -74,6 +59,8 @@ export async function getAllbathSuit() {
     return [];
   }
 }
+
+
 export async function getAllbags() {
   try {
     const res = await axios.get(`${BASE_URL}/bags`);

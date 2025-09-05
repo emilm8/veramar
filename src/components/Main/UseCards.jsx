@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { FaBottleWater } from 'react-icons/fa6';
 
 function UseCards() {

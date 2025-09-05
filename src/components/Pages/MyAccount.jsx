@@ -50,8 +50,7 @@ function MyAccount() {
           </form>
         </div>
 
-        {/* Register */}
-        <div className="border-gray-300 border-2 rounded-lg p-6 shadow-sm">
+         <div className="border-gray-300 border-2 rounded-lg p-6 shadow-sm">
           <h2 className="text-xl font-medium mb-6">Register</h2>
           <form className="space-y-4">
             <div>

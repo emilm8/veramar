@@ -8,11 +8,7 @@ function ReadMore() {
 
     <p className='text-[40px] tracking-tighter font-light font-mono mt-10 text-[#748370]'>Joining forces for cleaner seas: Veramar and 4ocean</p>
 
-    <p className='mt-6 text-gray-400 tracking-wider text-[17px] '>At Veramar, we believe that fashion can be a force for good. We're not only passionate about creating swimwear that makes you feel amazing, but we're also committed to protecting the natural beauty that inspires us: our oceans. That's why sustainability is at the heart of everything we do, from choosing recycled materials to creating our "Veramar por el Mar" movement, which unites volunteers to clean the beaches of El Paredón.
-
-        But we know we can't do it alone. The fight against plastic pollution requires a collaborative effort, which is why we're proud to join forces with 4ocean, a global organization that shares our passion for ocean conservation.
-
-        4ocean, founded in 2017 by Alex Schulze and Andrew Cooper, was born from a powerful experience: a surf trip to Bali where, instead of perfect waves, they found an ocean awash in plastic. Since then, their mission has been clear: to clean the world's oceans and coastlines, one kilogram of trash at a time.</p>
+    <p className='mt-6 text-gray-400 tracking-wider text-[17px] '>At Veramar, we believe that fashion can be a force for good. We're not only passionate about creating swimwear that makes you feel amazing, but we're also committed to protecting the natural beauty that inspires us: our oceans. That's why sustainability is at the heart of everything we do, from choosing recycled materials to creating our "Veramar por el Mar" movement, which unites volunteers to clean the beaches of El Paredón.But we know we can't do it alone. The fight against plastic pollution requires a collaborative effort, which is why we're proud to join forces with 4ocean, a global organization that shares our passion for ocean conservation.        4ocean, founded in 2017 by Alex Schulze and Andrew Cooper, was born from a powerful experience: a surf trip to Bali where, instead of perfect waves, they found an ocean awash in plastic. Since then, their mission has been clear: to clean the world's oceans and coastlines, one kilogram of trash at a time.</p>
 
       <p className='mt-5 font-bold text-gray-500'>Veramar and 4ocean: an alliance for sustainability</p>
 
@@ -45,9 +41,9 @@ function ReadMore() {
         </ul>
    </div>
 
-   <div class="max-w-2xl mx-auto p-6">
-  <h2 class="text-2xl font-light mb-4">Leave a reply</h2>
-  <p class="text-gray-700 mb-6">
+   <div className="max-w-2xl mx-auto p-6">
+  <h2 className="text-2xl font-light mb-4">Leave a reply</h2>
+  <p className="text-gray-700 mb-6">
     Your email address will not be published. Required fields are marked <span class="text-red-500">*</span>
   </p>
 

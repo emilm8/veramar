@@ -83,12 +83,9 @@ function Header() {
       Contact
     </span>
   </Link>
-</nav>
-
-
-        
+</nav>  
         {menuOpen && (
-          <div className="lg:hidden  mt-3 flex flex-col items-center gap-3 sm:gap-4 bg-gray-50 p-3 rounded-lg shadow-md w-full text-sm sm:text-base ">
+          <div className="lg:hidden mt-3 flex flex-col items-center gap-3 sm:gap-4 bg-gray-50 p-3 rounded-lg shadow-md w-full text-sm sm:text-base ">
              
             <Link to="/veramar" onClick={() => setMenuOpen(false)}>Veramar</Link>
             <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>

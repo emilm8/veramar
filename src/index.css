@@ -3,6 +3,21 @@
 @source "../.flowbite-react/class-list.json";
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 
+@font-face {
+  font-family: "Frunchy";
+  src: url("./assets/font/FontsFree-Net-Frunchy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.frunchy{
+  font-family: "Frunchy";
+  src: url("./assets/font/FontsFree-Net-Frunchy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
  
   
   .swiper-slide {
@@ -54,4 +69,20 @@
   background-color: #5E6D50;
   width: 14px;
   height: 14px;
+}
+
+
+.my-toast {
+  color: #fff;               
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.toastify-color-success{
+  background-color: #D7CBB2;
+}
+
+.toastify-icon-color-success{
+  background-color: black;
 }
