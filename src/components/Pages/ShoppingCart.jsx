@@ -42,66 +42,64 @@ function ShoppingCart() {
   const sizesList = ["", "XS", "S", "M", "L", "XL"];
 
   return (
-    <div className="max-w-6xl mx-auto p-4 md:p-8">
-      <h1 className="text-2xl md:text-4xl text-[#6c745f] mb-6 md:mb-8 font-light">
-        Shopping Cart
+    <div className="max-w-7xl mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">
+      <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 tracking-tight">
+        Your Shopping Cart
       </h1>
 
       <div className="grid lg:grid-cols-3 gap-6">
-
-        <div className="lg:col-span-2 border rounded-lg p-4 md:p-6 bg-white shadow-sm">
+         <div className="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
           {cartItems.length === 0 ? (
-            <p className="text-[#6c745f]">Your cart is empty.</p>
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">Your cart is empty.</p>
+              <Link to="/main">
+                <button className="mt-4 bg-[#D7CBB2] text-white px-6 py-2 rounded-lg hover:bg-amber-600 transition duration-300">
+                  Continue Shopping
+                </button>
+              </Link>
+            </div>
           ) : (
             <>
-
-              <div className="hidden md:block overflow-x-auto">
-                <table className="w-full text-[#6c745f] text-sm md:text-base">
+               <div className="hidden md:block overflow-x-auto">
+                <table className="w-full text-gray-700 text-sm">
                   <thead>
-                    <tr className="text-left border-b">
-                      <th></th>
-                      <th>Product</th>
-                      <th>Size</th>
-                      <th>Price</th>
-                      <th>Amount</th>
-                      <th>Subtotal</th>
+                    <tr className="text-left border-b border-gray-200">
+                      <th className="py-4"></th>
+                      <th className="py-4">Product</th>
+                      <th className="py-4">Size</th>
+                      <th className="py-4">Price</th>
+                      <th className="py-4">Quantity</th>
+                      <th className="py-4">Subtotal</th>
                     </tr>
                   </thead>
                   <tbody>
                     {cartItems.map((item) => (
                       <tr
                         key={item.id}
-                        className="border-t hover:bg-[#faf9f7] transition"
+                        className="border-b border-gray-100 hover:bg-gray-50 transition duration-200"
                       >
-
-                        <td className="py-3 md:py-4">
+                        <td className="py-4">
                           <button
                             type="button"
                             onClick={() => removeFromCart(item.id)}
-                            className="text-xl hover:text-red-500 transition"
+                            className="text-lg text-gray-400 hover:text-red-500 transition duration-200"
                           >
                             ×
                           </button>
                         </td>
-
-
-                        <td className="py-3 md:py-4 flex items-center gap-3">
+                        <td className="py-4 flex items-center gap-4">
                           <img
                             src={item.img}
                             alt={item.name}
-                            className="w-14 h-14 md:w-16 md:h-16 object-cover rounded-md border"
+                            className="w-16 h-16 object-cover rounded-lg border border-gray-100"
                           />
-                          <span className="font-medium">{item.name}</span>
+                          <span className="font-medium text-gray-800">{item.name}</span>
                         </td>
-
-
-                        <td className="py-3 md:py-4">
+                        <td className="py-4">
                           <select
                             value={item.size || ""}
-                            onChange={(e) =>
-                              updateItemSize(item.id, e.target.value)
-                            }
-                            className="border rounded px-2 py-1 bg-white"
+                            onChange={(e) => updateItemSize(item.id, e.target.value)}
+                            className="border border-gray-300 rounded-lg px-3 py-1.5 bg-white focus:ring-2 focus:ring-indigo-500 focus:outline-none"
                           >
                             {sizesList.map((s) => (
                               <option key={s} value={s}>
@@ -110,45 +108,39 @@ function ShoppingCart() {
                             ))}
                           </select>
                         </td>
-
-
-                        <td className="py-3 md:py-4 font-medium">
+                        <td className="py-4 font-medium">
                           {currencySymbol} {formatPrice(item.price)}
                         </td>
-
-
-                        <td className="py-3 md:py-4 flex items-center gap-2">
-                          <button
-                            type="button"
-                            onClick={() => decrement(item.id)}
-                            className="w-8 h-8 flex items-center justify-center rounded-full border border-[#c8bea6] text-[#6c745f] hover:bg-[#e7e1d6] transition"
-                          >
-                            −
-                          </button>
-
-                          <input
-                            type="number"
-                            min="0"
-                            value={item.amount}
-                            onChange={(e) => {
-                              const val = Number(e.target.value);
-                              if (val <= 0) removeFromCart(item.id);
-                              else updateAmount(item.id, val);
-                            }}
-                            className="w-14 text-center rounded-md border border-[#c8bea6] py-1"
-                          />
-
-                          <button
-                            type="button"
-                            onClick={() => increment(item.id)}
-                            className="w-8 h-8 flex items-center justify-center rounded-full border border-[#c8bea6] text-[#6c745f] hover:bg-[#e7e1d6] transition"
-                          >
-                            +
-                          </button>
+                        <td className="py-4">
+                          <div className="flex items-center gap-2">
+                            <button
+                              type="button"
+                              onClick={() => decrement(item.id)}
+                              className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-indigo-50 hover:text-indigo-600 transition duration-200"
+                            >
+                              −
+                            </button>
+                            <input
+                              type="number"
+                              min="0"
+                              value={item.amount}
+                              onChange={(e) => {
+                                const val = Number(e.target.value);
+                                if (val <= 0) removeFromCart(item.id);
+                                else updateAmount(item.id, val);
+                              }}
+                              className="w-16 text-center rounded-lg border border-gray-300 py-1.5 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                            />
+                            <button
+                              type="button"
+                              onClick={() => increment(item.id)}
+                              className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-indigo-50 hover:text-indigo-600 transition duration-200"
+                            >
+                              +
+                            </button>
+                          </div>
                         </td>
-
-
-                        <td className="py-3 md:py-4 font-semibold">
+                        <td className="py-4 font-semibold">
                           {currencySymbol} {formatPrice(item.price * item.amount)}
                         </td>
                       </tr>
@@ -157,41 +149,36 @@ function ShoppingCart() {
                 </table>
               </div>
 
-
-              <div className="space-y-4 md:hidden">
+               <div className="space-y-4 md:hidden">
                 {cartItems.map((item) => (
                   <div
                     key={item.id}
-                    className="border rounded-lg p-3 shadow-sm flex flex-col gap-3"
+                    className="border border-gray-100 rounded-lg p-4 shadow-sm bg-white"
                   >
-
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <img
                           src={item.img}
                           alt={item.name}
-                          className="w-16 h-16 object-cover rounded-md border"
+                          className="w-16 h-16 object-cover rounded-lg border border-gray-100"
                         />
-                        <span className="font-medium">{item.name}</span>
+                        <span className="font-medium text-gray-800">{item.name}</span>
                       </div>
                       <button
                         type="button"
                         onClick={() => removeFromCart(item.id)}
-                        className="text-xl hover:text-red-500 transition"
+                        className="text-lg text-gray-400 hover:text-red-500 transition duration-200"
                       >
                         ×
                       </button>
                     </div>
 
-                    {/* Size */}
-                    <div>
-                      <label className="text-sm">Size:</label>
+                    <div className="mt-3">
+                      <label className="text-sm text-gray-600">Size:</label>
                       <select
                         value={item.size || ""}
-                        onChange={(e) =>
-                          updateItemSize(item.id, e.target.value)
-                        }
-                        className="border rounded px-2 py-1 w-full mt-1"
+                        onChange={(e) => updateItemSize(item.id, e.target.value)}
+                        className="border border-gray-300 rounded-lg px-3 py-1.5 w-full mt-1 bg-white focus:ring-2 focus:ring-indigo-500 focus:outline-none"
                       >
                         {sizesList.map((s) => (
                           <option key={s} value={s}>
@@ -201,26 +188,23 @@ function ShoppingCart() {
                       </select>
                     </div>
 
-                     <div className="flex justify-between text-sm">
-                      <span>
+                    <div className="flex justify-between text-sm mt-3">
+                      <span className="text-gray-600">
                         Price: {currencySymbol} {formatPrice(item.price)}
                       </span>
-                      <span className="font-semibold">
-                        Subtotal: {currencySymbol}{" "}
-                        {formatPrice(item.price * item.amount)}
+                      <span className="font-semibold text-gray-800">
+                        Subtotal: {currencySymbol} {formatPrice(item.price * item.amount)}
                       </span>
                     </div>
 
-
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 mt-3">
                       <button
                         type="button"
                         onClick={() => decrement(item.id)}
-                        className="w-8 h-8 flex items-center justify-center rounded-full border border-[#c8bea6] text-[#6c745f] hover:bg-[#e7e1d6] transition"
+                        className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-indigo-50 hover:text-indigo-600 transition duration-200"
                       >
                         −
                       </button>
-
                       <input
                         type="number"
                         min="0"
@@ -230,13 +214,12 @@ function ShoppingCart() {
                           if (val <= 0) removeFromCart(item.id);
                           else updateAmount(item.id, val);
                         }}
-                        className="w-14 text-center rounded-md border border-[#c8bea6] py-1"
+                        className="w-16 text-center rounded-lg border border-gray-300 py-1.5 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
                       />
-
                       <button
                         type="button"
                         onClick={() => increment(item.id)}
-                        className="w-8 h-8 flex items-center justify-center rounded-full border border-[#c8bea6] text-[#6c745f] hover:bg-[#e7e1d6] transition"
+                        className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:bg-indigo-50 hover:text-indigo-600 transition duration-200"
                       >
                         +
                       </button>
@@ -245,64 +228,63 @@ function ShoppingCart() {
                 ))}
               </div>
 
-
-              <div className="mt-4 md:mt-6 flex flex-col sm:flex-row gap-3">
+               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <button
                   type="button"
-                  className="bg-[#e7e1d6] text-[#6c745f] px-4 md:px-6 py-2 rounded-md"
+                  className="bg-gray-100 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-200 transition duration-200 disabled:opacity-50"
                   disabled
                 >
-                  Update cart
+                  Update Cart
                 </button>
                 <button
                   type="button"
-                  className="bg-red-50 hover:bg-red-100 text-red-600 px-4 md:px-6 py-2 rounded-md border border-red-200 transition"
+                  className="bg-red-100 text-red-600 px-6 py-2 rounded-lg hover:bg-red-200 transition duration-200"
                   onClick={clearCart}
                 >
-                  Clear cart
+                  Clear Cart
                 </button>
               </div>
             </>
           )}
         </div>
 
+ 
+         {cartItems.length > 0 && (
+          <div className="bg-white rounded-xl shadow-lg p-6 sticky top-4">
+            <h2 className="text-lg font-semibold text-gray-800 mb-4">Cart Totals</h2>
 
-        <div className="border rounded-lg p-4 md:p-6 text-[#6c745f] bg-white shadow-sm">
-          <h2 className="text-base md:text-lg mb-4 font-medium">
-            Cart Totals
-          </h2>
+            <div className="flex justify-between mb-3 text-sm text-gray-600">
+              <span>Subtotal</span>
+              <span className="font-medium">
+                {currencySymbol} {formatPrice(subtotal)}
+              </span>
+            </div>
 
-          <div className="flex justify-between mb-2 text-sm md:text-base">
-            <span>Subtotal</span>
-            <span>
-              {currencySymbol} {formatPrice(subtotal)}
-            </span>
-          </div>
+            <div className="mb-3 text-sm text-gray-600">
+              <p>Shipping</p>
+              <p className="font-medium">
+                Fixed price: {currencySymbol} {formatPrice(shippingCost)}
+              </p>
+              <p className="text-gray-500">Send to Azerbaijan</p>
+              <button className="text-indigo-600 hover:text-indigo-800 text-sm underline transition duration-200">
+                Change Address
+              </button>
+            </div>
 
-          <div className="mb-2 text-sm md:text-base">
-            <p>Shipping</p>
-            <p>
-              Fixed price: {currencySymbol} {formatPrice(shippingCost)}
-            </p>
-            <p>Send to Azerbaijan.</p>
-            <button className="underline hover:text-[#4b5242] transition">
-              Change address
-            </button>
-          </div>
-
-          <div className="flex justify-between font-semibold mt-4 text-sm md:text-base">
-            <span>Total</span>
-            <span>
-              {currencySymbol} {formatPrice(total)}
-            </span>
-          </div>
+            <div className="flex justify-between font-semibold text-gray-800 mt-4">
+              <span>Total</span>
+              <span>
+                {currencySymbol} {formatPrice(total)}
+              </span>
+            </div>
 
             <Link to="/final">
-          <button className="bg-gradient-to-r from-[#c8bea6] to-[#e7e1d6] text-[#4b5242] font-medium w-full py-2 md:py-3 rounded-lg mt-4 md:mt-6 shadow hover:shadow-md transition">
-            Finalize Purchase
-          </button>
+              <button className="w-full bg-[#D7CBB2] text-white font-medium py-3 rounded-lg mt-6 transition duration-300 shadow-sm hover:shadow-md">
+                Finalize Purchase
+              </button>
             </Link>
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -94,10 +94,6 @@ function Main() {
     </div>
   </div>
 </div>
-
-
-
-
     
 
         <div className='flex max-w-6xl mx-auto'>
@@ -110,12 +106,6 @@ function Main() {
         <span className='bg-[#D7CBB2] flex justify-center max-w-[200px] mx-auto mb-10 mt-5 px-4 sm:px-6 py-2 sm:py-2 rounded-md cursor-pointer hover:bg-amber-600 transition-colors text-xs sm:text-sm font-medium'>See Store</span>
           </Link>
       
-
-
-
-
-
-
    </>
   )
 }
