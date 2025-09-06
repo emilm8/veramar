@@ -79,7 +79,7 @@ function Main() {
     </div>
 
 
-    <div className="flex-1 text-center">
+    <div className="flex-1  text-center">
       <img
         src="/img/chicks.webp"
         alt="Women for Women"

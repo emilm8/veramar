@@ -89,7 +89,7 @@ function Header() {
              
             <Link to="/veramar" onClick={() => setMenuOpen(false)}>Veramar</Link>
             <Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
-            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contacto</Link>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
 
             
 
